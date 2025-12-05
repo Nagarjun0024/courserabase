@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="imgelogo" width="100" height="100" class="center">
+    </header>
+    <main>
+        <h2 align="center">Reservation Page</h2>
+        <form method="post">
+            <div>
+                <label for="Booking_date">Booking date</label>
+                <input type="date" id="Booking_date" name="Booking_date" required>
+            </div>
+            <div>
+                <label for="Booking_people">No of people</label>
+                <input type="range" id="Booking_people" name="Booking_people" min="1" max="10" value="4" oninput="this.nextElementSibling.value = this.value">
+                <output>4</output>
+            </div>
+            <div>
+                <label for="locations">Location</label>
+                <input id="Booking_location" for="Booking_location" list="locations">
+                <datalist id="locations">
+                    <option value="Chennai">Chennai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </datalist>
+            </div>
+            <div>
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>copyright @ 2024 Tasty Restaurant</p>
+    </footer>
+</body>
+</html>
